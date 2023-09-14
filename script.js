@@ -1,3 +1,4 @@
+// Randomly select a choice for the computer
 function getComputerChoice() {
     const computerHand = ["rock", "paper", "scissors"];
     const randomFloat = Math.random() * 3;
@@ -5,6 +6,7 @@ function getComputerChoice() {
     return computerHand[randomIndex];
 }
 
+// Determine the result of a single round
 function playRound(playerChoice, computerChoice) {
     if (playerChoice === "rock" && computerChoice === "rock") {
         return "It's a tie.";
@@ -27,7 +29,7 @@ function playRound(playerChoice, computerChoice) {
     }
 }
 
-
+// Manage the game state to declare a winner after 5 rounds
 function game(result) {
     if (playerWins < 5 || computerWins < 5) {
         roundWinner.textContent = result; 
